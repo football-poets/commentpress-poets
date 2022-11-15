@@ -1,0 +1,1430 @@
+/*
+================================================================================
+CommentPress Football Poets Styles
+================================================================================
+AUTHOR: Christian Wach <needle@haystack.co.uk>
+--------------------------------------------------------------------------------
+NOTES
+
+All styles that are 100% specific to the Football Poets site live here.
+
+--------------------------------------------------------------------------------
+*/
+
+
+
+/*
+--------------------------------------------------------------------------------
+Header
+--------------------------------------------------------------------------------
+*/
+
+@media (max-width: 600px) {
+	#header
+	{
+		font-size: 100%;
+	}
+}
+
+/* Football Poets logo */
+#title h1
+{
+	float: left;
+	width: 150px;
+}
+
+#title h1 a
+{
+	display: block;
+	width: 150px;
+	height: 50px;
+	text-indent: -9999px;
+	background: transparent url("../images/logo/football-poets-logo-150.png") 50% 50% no-repeat;
+	margin: 0;
+}
+
+#header #tagline
+{
+	color: #111111;
+	padding: 2.7em 0 0 1em;
+	float: left;
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-size: 70%;
+	font-weight: bold;
+	text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+	#title h1
+	{
+		padding-top: 0.1em;
+	}
+
+	#title h1 a
+	{
+		background-size: 75%;
+		background-position-x: 0;
+	}
+
+	#header #tagline
+	{
+		float: none;
+		clear: left;
+		padding: 0 0 0.5em 0;
+		font-size: 50%;
+	}
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Content
+--------------------------------------------------------------------------------
+*/
+
+@media (max-width: 420px) {
+	.post h2.post_title,
+	.search_result h3
+	{
+		margin-top: 2em;
+	}
+}
+
+.cp_featured_title .post_title a
+{
+	text-shadow: 0 0 20px #aaa;
+}
+
+.home-page #page_wrapper
+{
+	min-height: 0;
+	/* background: transparent; */
+	background: #fafaf5;
+}
+
+.home-page #content
+{
+	padding: 2% 0;
+	margin: 0 4%;
+}
+
+.home-page .cp_featured_title
+{
+	visibility: hidden;
+}
+
+.home-page #content .post
+{
+	font-family: monospace;
+	text-transform: uppercase;
+	font-size: 120%;
+}
+
+@media (max-width: 420px) {
+	.home-page #content .post
+	{
+		font-size: 100%;
+	}
+}
+
+.home-page #content .post a:hover,
+.home-page #content .post a:focus,
+.home-page #content .post a:active
+{
+	color: #000;
+	/* text-decoration: underline; */
+}
+
+.home-page #content .post a
+{
+	color: #000;
+	/* text-decoration: none; */
+}
+
+.home-page.logged-in #content .post .fp-hide-from-logged-in
+{
+	display: none;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Contact Us
+--------------------------------------------------------------------------------
+*/
+
+.page-id-40 #post-40.post address
+{
+	padding: 6em 4em 2em;
+	border: 1px solid #ddd;
+	position: relative;
+	font-size: 90%;
+}
+
+.page-id-40 #post-40.post address span
+{
+	display: block;
+	width: 2.5em;
+	height: 3em;
+	position: absolute;
+	top: 2em;
+	right: 2em;
+	background: #ddd;
+}
+
+@media print {
+	.page-id-40 #post-40.post address
+	{
+		padding: 12% 12% 8%;
+	}
+}
+
+
+/*
+--------------------------------------------------------------------------------
+Archive listings
+--------------------------------------------------------------------------------
+*/
+
+.post-type-archive-poem .search_result h3
+{
+	margin-bottom: 0;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Widgets & Widget Areas
+--------------------------------------------------------------------------------
+*/
+
+.cp-homepage-widgets
+{
+	background: #EAE9DB;
+}
+
+/* common styles */
+.cp-homepage-left,
+.cp-homepage-right,
+.cp-homepage-below
+{
+}
+
+.cp-homepage-left .widget,
+.cp-homepage-right .widget,
+.cp-homepage-below .widget
+{
+	clear: left;
+}
+
+/* Homepage Left widget area */
+.cp-homepage-left
+{
+	float: left;
+	width: 50%;
+	padding-top: 2%;
+}
+
+.cp-homepage-left .widget
+{
+	margin: 0 3% 0 6%;
+	width: 91%;
+}
+
+/* Homepage Right widget area */
+.cp-homepage-right
+{
+	float: left;
+	width: 50%;
+	padding-top: 2%;
+}
+
+.cp-homepage-right .widget
+{
+	margin: 0 6% 0 3%;
+	width: 91%;
+}
+
+/* Homepage Below widget area */
+.cp-homepage-below
+{
+	clear: left;
+	padding: 1px 0;
+}
+
+.cp-homepage-below .widget
+{
+	margin: 0 auto;
+	width: 80%;
+}
+
+@media all and (max-width: 600px) {
+
+	.cp-homepage-left,
+	.cp-homepage-right,
+	.cp-homepage-below
+	{
+		width: auto;
+		float: none;
+		clear: both;
+	}
+
+	.cp-homepage-left .widget,
+	.cp-homepage-right .widget
+	{
+		margin: 0 4%;
+	}
+
+	.cp-homepage-below .widget
+	{
+		width: 92%;
+	}
+
+}
+
+
+
+/* About widget - uncomment to show on load */
+#sidebar #text-3 .paragraph_wrapper
+{
+	/* display: block; */
+}
+
+#sidebar #text-3 .textwidget
+{
+	line-height: 1.5;
+}
+
+
+
+/* Custom widgets for Football Poets site */
+.widget .widget-inner
+{
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+.cp-homepage-widgets .widget .widget-inner
+{
+	background-color: #eeede2;
+}
+
+.cp-homepage-widgets .widget.widget_fp_crispin_widget .widget-title,
+.cp-homepage-widgets .widget.widget_fp_butler_widget .widget-title,
+.cp-homepage-widgets .widget.widget_fp_clik_widget .widget-title,
+.cp-homepage-widgets .widget.widget_fp_in_memoriam_widget .widget-title,
+.cp-homepage-widgets .widget.widget_fp_kick_it_widget .widget-title
+{
+	margin-bottom: 0.5em;
+}
+
+.cp-homepage-widgets .widget.widget_fp_butler_widget .widget-title,
+.cp-homepage-widgets .widget.widget_fp_clik_widget .widget-title,
+.cp-homepage-widgets .widget.widget_fp_in_memoriam_widget .widget-title,
+.cp-homepage-widgets .widget.widget_fp_kick_it_widget .widget-title
+{
+	margin-top: 2em;
+}
+
+.widget.widget_fp_butler_widget img.avatar,
+.widget.widget_fp_clik_widget img.avatar,
+.widget.widget_fp_in_memoriam_widget img.avatar,
+.widget.widget_fp_kick_it_widget img.avatar,
+.widget.widget_fp_crispin_widget img.avatar
+{
+	float: left;
+	margin-right: 0;
+}
+
+.cp-homepage-widgets .widget.widget_fp_crispin_widget img.avatar,
+.cp-homepage-widgets .widget.widget_fp_butler_widget img.avatar,
+.cp-homepage-widgets .widget.widget_fp_clik_widget img.avatar,
+.cp-homepage-widgets .widget.widget_fp_in_memoriam_widget img.avatar,
+.cp-homepage-widgets .widget.widget_fp_kick_it_widget img.avatar
+{
+	width: 125px;
+	height: 125px;
+}
+
+.widget.widget_fp_butler_widget ul,
+.widget.widget_fp_clik_widget ul,
+.widget.widget_fp_in_memoriam_widget ul,
+.widget.widget_fp_kick_it_widget ul,
+.widget.widget_fp_crispin_widget ul
+{
+	margin: 0;
+	padding: 0;
+	margin-left: 100px;
+}
+
+.cp-homepage-widgets .widget.widget_fp_butler_widget ul,
+.cp-homepage-widgets .widget.widget_fp_clik_widget ul,
+.cp-homepage-widgets .widget.widget_fp_in_memoriam_widget ul,
+.cp-homepage-widgets .widget.widget_fp_kick_it_widget ul,
+.cp-homepage-widgets .widget.widget_fp_crispin_widget ul
+{
+	margin-left: 125px;
+}
+
+.widget.widget_fp_butler_widget ul li,
+.widget.widget_fp_clik_widget ul li,
+.widget.widget_fp_in_memoriam_widget ul li,
+.widget.widget_fp_kick_it_widget ul li,
+.widget.widget_fp_crispin_widget ul li
+{
+	list-style: none;
+	list-style-image: none;
+	border-bottom: 1px dotted #eee;
+}
+
+.widget.widget_fp_butler_widget a:hover,
+.widget.widget_fp_butler_widget a:focus,
+.widget.widget_fp_clik_widget a:hover,
+.widget.widget_fp_clik_widget a:focus,
+.widget.widget_fp_in_memoriam_widget a:hover,
+.widget.widget_fp_in_memoriam_widget a:focus,
+.widget.widget_fp_kick_it_widget a:hover,
+.widget.widget_fp_kick_it_widget a:focus,
+.widget.widget_fp_crispin_widget a:hover,
+.widget.widget_fp_crispin_widget a:focus
+{
+	background-color: #fff;
+	color: #333;
+}
+
+.widget.widget_fp_butler_widget a,
+.widget.widget_fp_butler_widget a:active,
+.widget.widget_fp_clik_widget a,
+.widget.widget_fp_clik_widget a:active,
+.widget.widget_fp_in_memoriam_widget a,
+.widget.widget_fp_in_memoriam_widget a:active,
+.widget.widget_fp_kick_it_widget a,
+.widget.widget_fp_kick_it_widget a:active,
+.widget.widget_fp_crispin_widget a,
+.widget.widget_fp_crispin_widget a:active
+{
+	font-size: 100%;
+	display: block;
+	padding: 4px 10px;
+	color: #333;
+	text-decoration: none;
+}
+
+#sidebar .widget.widget_fp_butler_widget a,
+#sidebar .widget.widget_fp_butler_widget a:active,
+#sidebar .widget.widget_fp_clik_widget a,
+#sidebar .widget.widget_fp_clik_widget a:active,
+#sidebar .widget.widget_fp_in_memoriam_widget a,
+#sidebar .widget.widget_fp_in_memoriam_widget a:active,
+#sidebar .widget.widget_fp_kick_it_widget a,
+#sidebar .widget.widget_fp_kick_it_widget a:active,
+#sidebar .widget.widget_fp_crispin_widget a,
+#sidebar .widget.widget_fp_crispin_widget a:active
+{
+	font-size: 80%;
+}
+
+
+
+/* Sign Up Now button */
+a.button.fp-join-in:hover
+{
+	color: #f7f7ef;
+	background: #767d13;
+}
+
+a.button.fp-join-in
+{
+	color: #f7f7ef;
+	background: #5c620f;
+}
+
+
+
+/* Facebook widget on homepage */
+.cp-homepage-widgets .widget.widget_facebook_likebox
+{
+	padding-bottom: 2em;
+}
+
+.cp-homepage-widgets .widget.widget_facebook_likebox .widget-title a
+{
+	color: #333;
+	text-decoration: none;
+}
+
+
+
+/* Latest Poems widget in Sidebar - uncomment to show on load */
+#sidebar .widget.widget_poets_poems_latest .paragraph_wrapper
+{
+	display: block;
+}
+
+/* Latest Poems widget on homepage */
+.cp-homepage-widgets .widget.widget_poets_poems_latest .widget-title
+{
+	padding-left: 10px;
+}
+
+.widget.widget_poets_poems_latest ol
+{
+	margin: 0;
+	padding: 0;
+}
+
+.widget.widget_poets_poems_latest ol li
+{
+	list-style: none;
+	list-style-image: none;
+	border-bottom: 1px dotted #eee;
+	line-height: 1.5;
+}
+
+.widget.widget_poets_poems_latest a:hover,
+.widget.widget_poets_poems_latest a:focus
+{
+	background-color: #fff;
+	color: #333;
+}
+
+.widget.widget_poets_poems_latest a,
+.widget.widget_poets_poems_latest a:active
+{
+	display: block;
+	font-weight: normal;
+	font-size: 100%;
+	padding: 8px 10px;
+	text-decoration: none;
+	background-color: transparent;
+	color: #333;
+}
+
+.widget.widget_poets_poems_latest a:active
+{
+	background-color: #fff;
+}
+
+.widget.widget_poets_poems_latest span.entry-title
+{
+	font-weight: bold;
+}
+
+.widget.widget_poets_poems_latest span.post-author
+{
+	font-style: italic;
+	font-size: 90%;
+}
+
+.widget.widget_poets_poems_latest span.post-date
+{
+	font-size: 70%;
+}
+
+@media all and (max-width: 1020px) {
+
+	.widget.widget_poets_poems_latest a,
+	.widget.widget_poets_poems_latest a:active
+	{
+		font-size: 1em;
+		padding: 15px 10px;
+	}
+
+	.widget.widget_poets_poems_latest span.post-author
+	{
+		font-size: 90%;
+	}
+
+	.widget.widget_poets_poems_latest span.post-date
+	{
+		font-size: 80%;
+	}
+
+}
+
+
+
+/* Featured Poem widget */
+.widget.widget_poets_poems_featured
+{
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+.widget.widget_poets_poems_featured .post
+{
+	padding: 1em 2em;
+	background: #fff;
+}
+
+.widget.widget_poets_poems_featured .post h3
+{
+	font-size: 140%;
+	margin: 0.7em 0 0 0;
+	line-height: 1.2;
+}
+
+.widget.widget_poets_poems_featured .poem-meta
+{
+	margin-bottom: 1em;
+}
+
+.widget.widget_poets_poems_featured .post a:hover,
+.widget.widget_poets_poems_featured .post a:focus
+{
+	text-decoration: underline;
+}
+
+.widget.widget_poets_poems_featured .post a,
+.widget.widget_poets_poems_featured .post a:active
+{
+	color: #333;
+	text-decoration: none;
+}
+
+.widget.widget_poets_poems_featured .poem-meta cite
+{
+	display: block;
+	font-size: 80%;
+}
+
+.widget.widget_poets_poems_featured .poem-meta .post-date
+{
+	display: block;
+	font-size: 70%;
+}
+
+.widget.widget_poets_poems_featured .poem-content
+{
+	font-size: 90%;
+}
+
+.widget.widget_poets_poems_featured .post p.search_meta a
+{
+	font-size: 110%;
+	text-transform: uppercase;
+	font-weight: bold;
+}
+
+.widget.widget_poets_poems_featured .poem_meta
+{
+	border-top: 1px solid #ddd;
+	margin-top: 0;
+	padding-top: 0.7em;
+}
+
+.widget.widget_poets_poems_featured .poem_meta .poem_content_notes
+{
+	font-size: 80%;
+}
+
+
+
+/* How many poems? widget */
+.cp-homepage-widgets .widget.widget_poets_poems_total
+{
+	margin-top: 1.25em;
+	margin-bottom: 1.5em;
+}
+
+.cp-homepage-widgets .widget.widget_poets_poems_total h3
+{
+	display: none;
+}
+
+.cp-homepage-widgets .widget.widget_poets_poems_total p
+{
+	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+
+
+/* Sign up link widget */
+#text-4
+{
+	margin-bottom: 3em;
+}
+
+#text-4 h3
+{
+	display: none;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Poem Custom Post Type
+--------------------------------------------------------------------------------
+*/
+.post.poem .post_title
+{
+	text-transform: none;
+}
+
+.post.poem div.search_meta
+{
+	margin-top: -1.6em;
+	margin-bottom: 1.6em;
+}
+
+.post.poem div.search_meta cite
+{
+	font-size: 1em;
+}
+
+.single-poem #content
+{
+	padding-bottom: 12%;
+}
+
+@media (max-width: 420px) {
+	.single-poem #content
+	{
+		padding-bottom: 18%;
+	}
+}
+
+.poem_meta
+{
+	border-top: 1px solid #ccc;
+	margin-top: 3em;
+}
+
+.poem_meta h4
+{
+	margin-top: 1em;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Poem Custom Post Type Archive
+--------------------------------------------------------------------------------
+*/
+.post-type-archive-poem .search_result div.search_meta
+{
+	margin-top: 0;
+	margin-bottom: 1em;
+}
+
+.post-type-archive-poem .search_result
+{
+	margin: 2em 0 3em 0;
+	border-bottom: 1px solid #f7f7ef;
+}
+
+.post-type-archive-poem .post p.search_meta
+{
+	padding: 0;
+	margin: 0;
+	border-top: 1px solid #f7f7ef;
+}
+
+.post-type-archive-poem .post p.search_meta a:hover,
+.post-type-archive-poem .post p.search_meta a:focus,
+.post-type-archive-poem .post p.search_meta a:active
+{
+	background-color: #fafaf5;
+	text-decoration: none;
+}
+
+.post-type-archive-poem .post p.search_meta a
+{
+	font-size: 110%;
+	text-transform: uppercase;
+	font-weight: bold;
+	display: block;
+	padding: 0.4em 0.6em;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Poet Custom Post Type
+--------------------------------------------------------------------------------
+*/
+.single-poet .post_title
+{
+	text-transform: none;
+}
+
+.cp_feature_image .cp_featured_title
+{
+	background: rgba( 255, 255, 255, 0.5 );
+}
+
+.single-poet .cp_feature_image .cp_featured_title .cp_featured_title_inner
+{
+	padding: 1% 12%;
+}
+
+.single-poet .cp_feature_image .cp_featured_title .cp_featured_title_inner div.search_meta
+{
+	display: none;
+}
+
+.poems-by-poet
+{
+	margin: 3em 0;
+}
+
+.poems-by-poet-list
+{
+	margin: 0;
+	border-top: 1px solid #c1c3a9;
+}
+
+.poems-by-poet li.poem
+{
+	margin: 0;
+	line-height: 1.5;
+	border-bottom: 1px solid #c1c3a9;
+	list-style: none;
+	list-style-image: none;
+}
+
+.poems-by-poet li.poem a:hover,
+.poems-by-poet li.poem a:focus,
+.poems-by-poet li.poem a:active
+{
+	text-decoration: none;
+	background-color: #f7f7ef;
+}
+
+.poems-by-poet li.poem a
+{
+	display: block;
+	text-decoration: none;
+	padding: 4px 6px;
+	margin: 0;
+}
+
+.poems-by-poet li.load-more
+{
+	background: #f0f0f0;
+	font-size: 110%;
+	margin: 0;
+	padding: 10px 15px;
+	text-align: center;
+	list-style: none;
+	list-style-image: none;
+}
+
+.poems-by-poet li.load-more:after
+{
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+}
+
+.poems-by-poet li.load-more a
+{
+	font-family: sans-serif;
+	text-transform: uppercase;
+	text-decoration: none;
+	display: inline-block;
+	width: 27%;
+	margin: 0 auto;
+	color: #666;
+}
+
+.poems-by-poet li.load-more a.loading
+{
+    background-position-y: 2px;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Poet Custom Post Type Archive
+--------------------------------------------------------------------------------
+*/
+.post-type-archive-poet .search_result
+{
+	margin: 0;
+	border: none;
+}
+
+.post-type-archive-poet .poets-list
+{
+	border-top: 1px solid #c1c3a9;
+}
+
+.post-type-archive-poet .search_result h3
+{
+	margin: 0;
+	padding: 0;
+}
+
+.post-type-archive-poet .search_result h3 a:hover,
+.post-type-archive-poet .search_result h3 a:focus,
+.post-type-archive-poet .search_result h3 a:active
+{
+	text-decoration: none;
+	background-color: #f7f7ef;
+}
+
+.post-type-archive-poet .search_result h3 a
+{
+	display: block;
+	font-size: 50%;
+	padding: 4px 6px;
+	margin: 0;
+	line-height: 1.9;
+	text-transform: none;
+	border-bottom: 1px solid #c1c3a9;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Poet Search Form
+--------------------------------------------------------------------------------
+*/
+.poet-search
+{
+	border: 1px solid #eee;
+	padding: 0.8em 1em 1em 1em;
+	margin: 1em 0 2em 0;
+	background: #fafaf5;
+}
+
+.poet-search h3
+{
+	font-size: 80%;
+	margin-top: 0;
+}
+
+.poet-search input[type=submit]
+{
+	vertical-align: top;
+	font-size: 100%;
+	padding: 6px;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+BuddyPress Member <--> Poet Profile support
+--------------------------------------------------------------------------------
+*/
+.poet-profile-linking-options h5
+{
+	margin-top: 1em;
+}
+
+#buddypress .poet-not-connected h4
+{
+	display: none;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Claim this Poet form
+--------------------------------------------------------------------------------
+*/
+.claim-this-poet
+{
+	padding: 1em;
+	margin-bottom: 1.5em;
+	border: 1px solid #c1c3a9;
+	background-color: #f7f7ef;
+}
+
+.claim-this-poet.pending
+{
+	border: 1px solid #ffbe9e;
+	background-color: #fff1eb;
+}
+
+.claim-this-poet.error
+{
+	border: 1px solid #fc6725;
+	background-color: #feede1;
+	color: #f00;
+}
+
+.claim-this-poet .claim_text p
+{
+	margin-top: 0;
+}
+
+.claim-this-poet img.poets-ajax-spinner
+{
+	margin-left: 10px;
+}
+
+.claim-this-poet p.claim_actions
+{
+	margin-bottom: 0;
+}
+
+/* Create new poet profile link */
+.claim-this-poet p.claim_actions a:hover,
+.claim-this-poet p.claim_actions a:focus,
+.claim-this-poet p.claim_actions a:active
+{
+	text-decoration: underline;
+}
+
+.claim-this-poet p.claim_actions a.create-new-profile
+{
+	text-transform: uppercase;
+	font-size: 80%;
+	margin-left: 1em;
+	font-weight: bold;
+	text-decoration: none;
+	color: #333;
+}
+
+/* Stop claiming "button" */
+#content .claim-this-poet p.claim_actions a.button
+{
+	vertical-align: 0;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	margin-left: 10px;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+BuddyPress customisations
+--------------------------------------------------------------------------------
+*/
+
+/* Hide headings on public profile */
+.profile.public div.profile h4
+{
+	display: none;
+}
+
+/* Ditch table border */
+.profile.public #buddypress table.profile-fields,
+.profile.public #buddypress table.profile-fields tr td,
+.profile.public #buddypress table.profile-fields tr td.label
+{
+	border: none;
+	vertical-align: top;
+}
+
+/* Register link in BP Login Widget */
+.widget.buddypress #bp-login-widget-form .bp-login-widget-register-link
+{
+	margin-left: 10px;
+	vertical-align: unset;
+}
+
+/* Lost Password link in BP Login Widget */
+.widget.buddypress #bp-login-widget-form .bp-login-widget-password-link
+{
+	margin-left: 10px;
+}
+
+.widget.buddypress #bp-login-widget-form .bp-login-widget-password-link a:hover,
+.widget.buddypress #bp-login-widget-form .bp-login-widget-password-link a:focus,
+.widget.buddypress #bp-login-widget-form .bp-login-widget-password-link a:active
+{
+	text-decoration: underline;
+}
+
+.widget.buddypress #bp-login-widget-form .bp-login-widget-password-link a
+{
+	color: #333;
+	text-decoration: none;
+}
+
+#buddypress ul.item-list.activity-list li.load-more,
+#buddypress ul.item-list.activity-list li.load-newest,
+#buddypress div.pagination
+{
+	/* background-color: #f8f7f2; */
+}
+
+#buddypress ul.item-list.activity-list li.load-more a,
+#buddypress ul.item-list.activity-list li.load-newest a
+{
+	color: #666;
+}
+
+#buddypress ul.item-list > li
+{
+	border-left: none;
+}
+
+.bp-user #buddypress div#message
+{
+	margin-left: 15px;
+    margin-right: 15px;
+}
+
+/* Make text area monospaced */
+#buddypress textarea.wp-editor-area
+{
+	font-family: Consolas, Monaco, monospace;
+	font-size: 85%;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+BuddyForms customisations
+--------------------------------------------------------------------------------
+*/
+
+.the_buddyforms_form #form_message_poets,
+.the_buddyforms_form #form_message_poems,
+#item-body > .error.alert
+{
+	margin: 0 19px;
+	color: #767d12;
+	/*
+	padding: 8px;
+	background-color: #efc;
+	border: 1px solid #591;
+	color: #250;
+	*/
+}
+
+/* give "access not allowed" notice a bit more room */
+#item-body > .error.alert
+{
+	margin: 19px;
+}
+
+/* clearfixes */
+.buddyforms_posts_list:before,
+.buddyforms_posts_list:after
+{
+	content: "";
+	display: table;
+	table-layout: fixed;
+}
+
+.buddyforms_posts_list:after
+{
+	clear: both;
+}
+
+/* Apply CommentPress navigation styles */
+.buddyforms_posts_list .navigation
+{
+	position: relative;
+	height: 92px;
+}
+
+.buddyforms_posts_list .navigation div
+{
+	position: absolute;
+	top: auto;
+	bottom: 0;
+}
+
+.buddyforms_posts_list .navigation .alignleft
+{
+	left: 0;
+}
+
+.buddyforms_posts_list .navigation .alignright
+{
+	right: 0;
+}
+
+.buddyforms_posts_list .navigation a
+{
+	display: block;
+	font-family: sans-serif;
+	width: 87px;
+	height: 92px;
+	text-align: center;
+	font-size: 1em;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-indent: -4000px;
+}
+
+/* define rollover action */
+.buddyforms_posts_list .navigation a:link
+{
+	overflow: hidden !important; /* hides Mozilla outlines */
+	background-position: left top !important;
+	background-repeat: no-repeat;
+}
+
+.buddyforms_posts_list .navigation a:hover,
+.buddyforms_posts_list .navigation a:focus,
+.buddyforms_posts_list .navigation a:active
+{
+	overflow: hidden !important; /* hides Mozilla outlines */
+	background-position: left -92px !important;
+	background-repeat: no-repeat;
+}
+
+.buddyforms_posts_list .navigation .alignright a
+{
+	background: transparent url(../images/nav/page-curl-bottom-right.jpg);
+}
+
+.buddyforms_posts_list .navigation .alignleft a
+{
+	background: transparent url(../images/nav/page-curl-bottom-left.jpg);
+}
+
+.buddyforms_posts_list .navigation .alignleft a:hover,
+.buddyforms_posts_list .navigation .alignright a:hover
+{
+	color: #ccc;
+	text-indent: -4000px;
+}
+
+.buddyforms_posts_list ul.buddyforms-list
+{
+	border-top: 1px solid rgba( 0, 0, 0, 0.1 );
+}
+
+.buddyforms_posts_list ul.buddyforms-list li div.meta
+{
+	text-align: left;
+}
+
+.buddyforms-list .edit_links .dashicons
+{
+	font-size: 36px;
+	width: 36px;
+	height: 36px;
+	line-height: 1;
+	vertical-align: middle;
+}
+
+ul.buddyforms-list li div.action
+{
+	max-width: none;
+	min-width: 0;
+	text-align: left;
+}
+
+ul.buddyforms-list li div.action > span
+{
+	padding-right: 7px;
+}
+
+.buddyforms_posts_list ul.buddyforms-list .item-status
+{
+	font-size: 14px;
+	line-height: 26px;
+	letter-spacing: 0.6px;
+}
+
+@media (min-width: 768px) {
+
+	.buddyforms_posts_list ul.buddyforms-list li div.action,
+	.buddyforms_posts_list ul.buddyforms-list li div.meta
+	{
+		text-align: right;
+	}
+
+	ul.buddyforms-list li.bf-submission
+	{
+		padding-top: 16px;
+		padding-bottom: 8px;
+	}
+
+}
+
+#buddypress .the_buddyforms_form .standard-form
+{
+	padding-top: 0;
+}
+
+#buddypress #editpost_poems button
+{
+	font-size: 100%;
+	padding: 10px;
+	color: #f7f7ef;
+	background: #767d13;
+	margin-top: 1em;
+}
+
+/**
+ * Select2 compatibility.
+ */
+#buddyforms-form .bf-select2 .select2-search-field input.select2-input
+{
+	padding: 0;
+	margin-left: 5px;
+	border: none;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Comment Form modifications
+--------------------------------------------------------------------------------
+*/
+#poet-profile-selector
+{
+	font-family: sans-serif;
+	display: block;
+	margin: 0.6em 0;
+}
+
+#poet-profile-selector span
+{
+	font-size: 70%;
+	text-transform: uppercase;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+JetPack Contact Form
+--------------------------------------------------------------------------------
+*/
+
+form.contact-form
+{
+	padding: 1em;
+	border: 1px solid #eee;
+	background-color: #f7f7ef;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Post Likes compatibility
+--------------------------------------------------------------------------------
+*/
+
+.post .sl-wrapper
+{
+	font-size: 150%;
+}
+
+.post .sl-button
+{
+	padding: 0.3em 0.5em 0.3em 0;
+}
+
+
+/*
+--------------------------------------------------------------------------------
+Admin Menu icons
+--------------------------------------------------------------------------------
+*/
+
+#wp-admin-bar-fp-primary .ab-item:before
+{
+	content: "\f110";
+	top: 2px;
+}
+
+#wp-admin-bar-fp-poem-new .ab-item:before
+{
+	content: "\f491";
+	top: 2px;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Fonts
+--------------------------------------------------------------------------------
+*/
+
+.poems-by-poet li.poem,
+.widget.widget_poets_poems_latest a,
+.widget.widget_poets_poems_latest a:active,
+.widget.widget_poets_poems_featured .post p.search_meta a,
+.search_result p.search_meta a
+{
+	font-family: Lato, 'Trebuchet MS', Helvetica, Arial, sans-serif;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Colour Scheme
+--------------------------------------------------------------------------------
+*/
+
+.widget.widget_fp_crispin_widget a:focus
+{
+	background-color: #fff;
+	color: #333;
+}
+
+.poems-by-poet li.poem a
+{
+	color: #333;
+}
+
+.poems-by-poet li.poem a:hover,
+.poems-by-poet li.poem a:focus,
+.poems-by-poet li.poem a:active
+{
+	color: #761D19;
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Responsive Tweaks
+--------------------------------------------------------------------------------
+*/
+
+@media all and (max-width: 650px) {
+
+	.cp_feature_image .cp_featured_title .cp_featured_title_inner h2.post_title
+	{
+		font-size: 140%;
+	}
+
+}
+
+@media all and (max-width: 450px) {
+
+	.cp_feature_image .cp_featured_title .cp_featured_title_inner h2.post_title
+	{
+		font-size: 120%;
+	}
+
+}
+
+
+
+/*
+--------------------------------------------------------------------------------
+Print Tweaks
+--------------------------------------------------------------------------------
+*/
+
+@media print {
+
+	div.fb_reset
+	{
+		display: none;
+	}
+
+}
+
+
+

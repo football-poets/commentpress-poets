@@ -1,0 +1,26 @@
+/*
+================================================================================
+Football Poets Comment Form Stylesheet
+================================================================================
+AUTHOR: Christian Wach <needle@haystack.co.uk>
+--------------------------------------------------------------------------------
+NOTES
+
+These styles amend the WP-themed TinyMCE editor.
+
+This stylesheet is also included whenever TinyMCE is included on the front-end
+e.g. by BuddyPress Docs or BuddyForms.
+
+--------------------------------------------------------------------------------
+*/
+
+/**
+ * The BuddyPress Rich Text Editor.
+ */
+.post-type-page p,
+.post-type-page ul,
+.post-type-page ol
+{
+	font-size: 16px;
+	line-height: 1.5;
+}

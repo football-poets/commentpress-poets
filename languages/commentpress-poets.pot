@@ -1,0 +1,194 @@
+# Copyright (C) 2022 Christian Wach
+# This file is distributed under the .
+msgid ""
+msgstr ""
+"Project-Id-Version: CommentPress Football Poets 1.4\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/theme/commentpress-poets\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2022-11-14T14:15:43+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.7.0\n"
+"X-Domain: commentpress-poets\n"
+
+#. Theme Name of the theme
+msgid "CommentPress Football Poets"
+msgstr ""
+
+#. Theme URI of the theme
+msgid "http://www.futureofthebook.org/commentpress/"
+msgstr ""
+
+#. Description of the theme
+msgid "A child of the CommentPress Flat Theme for <em>CommentPress Core</em>."
+msgstr ""
+
+#. Author of the theme
+msgid "Christian Wach"
+msgstr ""
+
+#. Author URI of the theme
+msgid "http://www.haystack.co.uk"
+msgstr ""
+
+msgid "Poetry Archives"
+msgstr ""
+
+msgid "This archive contains every poem that has been published on Football Poets. They are listed ten-per-page in reverse chronological order so the most recent poems appear first. Click or tap the arrows in the corners of the page to navigate between pages. It's easier to use the search form below to find a specific poem."
+msgstr ""
+
+msgid "Search Poems"
+msgstr ""
+
+msgid "Search"
+msgstr ""
+
+msgid "Permanent Link to"
+msgstr ""
+
+msgid "l, F jS, Y"
+msgstr ""
+
+msgid "Be the first to leave a comment &#187;"
+msgstr ""
+
+msgid "1 Comment &#187;"
+msgstr ""
+
+msgid "% Comments &#187;"
+msgstr ""
+
+msgid "Not Found"
+msgstr ""
+
+msgid "Sorry, but you are looking for something that isn't here."
+msgstr ""
+
+msgid "The Football Poets"
+msgstr ""
+
+msgid "This archive lists all the poets who have published one or more poems on this site. Poets are listed fifty-per-page in alphabetical order. Click or tap the arrows in the corners of the page to navigate between pages. It's easier to use the search form below if you are looking for a specific poet."
+msgstr ""
+
+msgid "Search Poets"
+msgstr ""
+
+msgid "Load more"
+msgstr ""
+
+msgid "Poems by %s"
+msgstr ""
+
+#. translators: %s: The name of the Post Type.
+msgid "Recent Comments on this %s"
+msgstr ""
+
+msgid "Latest Comments"
+msgstr ""
+
+msgid "Activity"
+msgstr ""
+
+msgid "View Conversation"
+msgstr ""
+
+msgid "Comment %s"
+msgstr ""
+
+msgid "Mark as Favorite"
+msgstr ""
+
+msgid "Favorite"
+msgstr ""
+
+msgid "Remove Favorite"
+msgstr ""
+
+#. translators: accessibility text
+msgid "Comment"
+msgstr ""
+
+msgid "Post"
+msgstr ""
+
+msgid "Cancel"
+msgstr ""
+
+msgid "Page Not Found"
+msgstr ""
+
+msgid "Loading"
+msgstr ""
+
+msgid "Authentication failed."
+msgstr ""
+
+msgid "Oh dear, something went wrong. No Poet ID was received."
+msgstr ""
+
+msgid "Notes"
+msgstr ""
+
+msgid "Homepage Left"
+msgstr ""
+
+msgid "An optional widget area on the left of the Homepage"
+msgstr ""
+
+msgid "Homepage Right"
+msgstr ""
+
+msgid "An optional widget area on the right of the Homepage"
+msgstr ""
+
+msgid "Homepage Lower"
+msgstr ""
+
+msgid "An optional widget area below the left and right widgets on the Homepage"
+msgstr ""
+
+#. translators: %s: The name of the Poet.
+msgid "This is the Football Poets profile page for %s. All the poems they have submitted to this website are listed here."
+msgstr ""
+
+msgid "Content"
+msgstr ""
+
+msgid "Literal"
+msgstr ""
+
+msgid "Original"
+msgstr ""
+
+msgid "Tags: "
+msgstr ""
+
+msgid "Categories:"
+msgstr ""
+
+msgid "Literal Translation"
+msgstr ""
+
+msgid "Original Text"
+msgstr ""
+
+msgid "Poem Not Found"
+msgstr ""
+
+msgid "Sorry, no poems matched your criteria."
+msgstr ""
+
+msgid "Poet Not Found"
+msgstr ""
+
+msgid "Sorry, no poets matched your criteria."
+msgstr ""
+
+msgid "Poems filed under"
+msgstr ""
+
+msgid "Poems tagged"
+msgstr ""
