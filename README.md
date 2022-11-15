@@ -1,4 +1,4 @@
-# Commentpress Poets Theme
+# CommentPress Poets Theme
 
 A WordPress child theme of the CommentPress Flat theme for the "Football Poets" website.
 
