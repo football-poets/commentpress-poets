@@ -35,7 +35,7 @@ if ( $_is_commentable && ! post_password_required() ) {
 	 */
 	$post_type_name = apply_filters( 'commentpress_lexia_post_type_name', $post_type_obj->labels->singular_name, $current_type );
 
-	// Construct recent comments phrase.
+	// Construct "Recent Comments" phrase.
 	$_paragraph_text = sprintf(
 		/* translators: %s: The name of the Post Type. */
 		__( 'Recent Comments on this %s', 'commentpress-poets' ),
