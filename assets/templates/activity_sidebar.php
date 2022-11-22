@@ -9,16 +9,19 @@
 defined( 'ABSPATH' ) || exit;
 
 // Access globals.
-global $post, $commentpress_core;
+global $post, $blog_id;
+
+// Get core plugin reference.
+$core = commentpress_core();
 
 // Init output.
 $_page_comments_output = '';
 
 // Is it commentable?
-$_is_commentable = commentpress_is_commentable();
+$is_commentable = commentpress_is_commentable();
 
 // If a commentable Post.
-if ( $_is_commentable && ! post_password_required() ) {
+if ( $is_commentable && ! post_password_required() ) {
 
 	// Get singular Post Type label.
 	$current_type = get_post_type();
@@ -93,7 +96,7 @@ $_max_members = 10;
 
 				?>
 
-				<?php if ( $_is_commentable && $_page_comments_output != '' ) : ?>
+				<?php if ( $is_commentable && $_page_comments_output != '' ) : ?>
 
 					<?php
 
