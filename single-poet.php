@@ -23,22 +23,9 @@ get_header();
 				<div id="page_wrapper">
 					<?php commentpress_get_feature_image(); ?>
 
-					<?php
-
-					// First try to locate using WP method.
-					$cp_page_navigation = apply_filters(
-						'cp_template_page_navigation',
-						locate_template( 'assets/templates/page_navigation.php' )
-					);
-
-					// Load featured image if we find it.
-					if ( ! commentpress_has_feature_image() ) {
-						if ( $cp_page_navigation != '' ) {
-							load_template( $cp_page_navigation, false );
-						}
-					}
-
-					?>
+					<?php if ( ! commentpress_has_feature_image() ) : ?>
+						<?php commentpress_page_navigation_template(); ?>
+					<?php endif; ?>
 
 					<div id="content" class="workflow-wrapper">
 						<div class="<?php echo join( ' ', get_post_class( 'post' ) ); ?><?php echo commentpress_get_post_css_override( get_the_ID() ); ?>" id="post-<?php the_ID(); ?>">
@@ -61,9 +48,7 @@ get_header();
 					</div><!-- /content -->
 
 					<div class="page_nav_lower">
-						<?php if ( $cp_page_navigation != '' ) : ?>
-							<?php load_template( $cp_page_navigation, false ); ?>
-						<?php endif; ?>
+						<?php commentpress_page_navigation_template(); ?>
 					</div><!-- /page_nav_lower -->
 
 				</div><!-- /page_wrapper -->
