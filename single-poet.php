@@ -8,6 +8,9 @@
 // Exit if accessed directly.
 defined( 'ABSPATH' ) || exit;
 
+// Get core plugin reference.
+$core = commentpress_core();
+
 get_header();
 
 ?>
@@ -17,18 +20,20 @@ get_header();
 	<?php if ( have_posts() ) : ?>
 
 		<?php while ( have_posts() ) : ?>
+
 			<?php the_post(); ?>
 
 			<div id="main_wrapper" class="clearfix">
 				<div id="page_wrapper">
+
 					<?php commentpress_get_feature_image(); ?>
 
 					<?php if ( ! commentpress_has_feature_image() ) : ?>
 						<?php commentpress_page_navigation_template(); ?>
 					<?php endif; ?>
 
-					<div id="content" class="workflow-wrapper">
-						<div class="<?php echo join( ' ', get_post_class( 'post' ) ); ?><?php echo commentpress_get_post_css_override( get_the_ID() ); ?>" id="post-<?php the_ID(); ?>">
+					<div id="content" class="content-wrapper">
+						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>">
 
 							<?php if ( ! commentpress_has_feature_image() ) : ?>
 								<h2 class="post_title"><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h2>
@@ -36,7 +41,7 @@ get_header();
 
 							<?php do_action( 'poets_connections_claim_form' ); ?>
 
-							<?php the_content( '' ); ?>
+							<?php the_content(); ?>
 
 						</div><!-- /post -->
 
@@ -52,7 +57,6 @@ get_header();
 					</div><!-- /page_nav_lower -->
 
 				</div><!-- /page_wrapper -->
-
 			</div><!-- /main_wrapper -->
 
 		<?php endwhile; ?>
@@ -60,25 +64,17 @@ get_header();
 	<?php else : ?>
 
 		<div id="main_wrapper" class="clearfix">
-
 			<div id="page_wrapper">
-
 				<div id="content">
-
 					<div class="post">
 
 						<h2 class="post_title"><?php esc_html_e( 'Poet Not Found', 'commentpress-poets' ); ?></h2>
-
 						<p><?php esc_html_e( 'Sorry, no poets matched your criteria.', 'commentpress-poets' ); ?></p>
-
 						<?php get_search_form(); ?>
 
 					</div><!-- /post -->
-
 				</div><!-- /content -->
-
 			</div><!-- /page_wrapper -->
-
 		</div><!-- /main_wrapper -->
 
 	<?php endif; ?>

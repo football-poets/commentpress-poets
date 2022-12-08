@@ -48,7 +48,7 @@ Header
 	color: #111111;
 	padding: 2.7em 0 0 1em;
 	float: left;
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 	font-size: 70%;
 	font-weight: bold;
 	text-transform: uppercase;
@@ -303,7 +303,7 @@ Widgets & Widget Areas
 /* Custom widgets for Football Poets site */
 .widget .widget-inner
 {
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 .cp-homepage-widgets .widget .widget-inner
@@ -636,7 +636,7 @@ a.button.fp-join-in
 
 .cp-homepage-widgets .widget.widget_poets_poems_total p
 {
-	font-family: "Open Sans", Helvetica, Arial, sans-serif;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
 }
 
 
