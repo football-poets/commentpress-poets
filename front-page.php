@@ -70,8 +70,8 @@ get_header();
 				<div id="content" class="content">
 					<div class="post">
 
-						<h2 class="post_title"><?php esc_html_e( 'Page Not Found', 'commentpress-poets' ); ?></h2>
-						<p><?php esc_html_e( "Sorry, but you are looking for something that isn't here.", 'commentpress-poets' ); ?></p>
+						<h2 class="post_title"><?php esc_html_e( 'Page Not Found', 'commentpress-sof-de' ); ?></h2>
+						<p><?php esc_html_e( 'Sorry, but you are looking for something that isn’t here.', 'commentpress-poets' ); ?></p>
 						<?php get_search_form(); ?>
 
 					</div><!-- /post -->
