@@ -18,6 +18,8 @@ defined( 'ABSPATH' ) || exit;
 // Set our version here.
 define( 'COMMENTPRESS_POETS_VERSION', '1.4' );
 
+
+
 /**
  * Augment the CommentPress Modern Theme setup function.
  *
@@ -46,6 +48,8 @@ function commentpress_poets_setup() {
 
 // Add action for the above.
 add_action( 'after_setup_theme', 'commentpress_poets_setup' );
+
+
 
 /**
  * Enqueue child theme styles.
@@ -77,6 +81,7 @@ function commentpress_poets_enqueue_styles() {
 
 // Add action for the above.
 add_action( 'wp_enqueue_scripts', 'commentpress_poets_enqueue_styles', 998 );
+
 
 
 /**
@@ -117,6 +122,8 @@ function commentpress_poets_enqueue_scripts() {
 
 // Add action for the above.
 add_action( 'wp_enqueue_scripts', 'commentpress_poets_enqueue_scripts', 998 );
+
+
 
 /**
  * Load more Poems on Poet Profile Page.
@@ -166,6 +173,8 @@ function commentpress_poets_poems_ajax_load() {
 add_action( 'wp_ajax_poets_poems_load', 'commentpress_poets_poems_ajax_load' );
 add_action( 'wp_ajax_nopriv_poets_poems_load', 'commentpress_poets_poems_ajax_load' );
 
+
+
 /**
  * Do not show the "Special Pages" menu.
  *
@@ -174,6 +183,8 @@ add_action( 'wp_ajax_nopriv_poets_poems_load', 'commentpress_poets_poems_ajax_lo
  * @return bool Always false - do not show menu.
  */
 add_filter( 'cp_content_tab_special_pages_visible', '__return_false' );
+
+
 
 /**
  * Show meta for a poem.
@@ -229,6 +240,8 @@ function commentpress_poets_poem_meta() {
 
 }
 
+
+
 /**
  * Register widget areas for this theme.
  *
@@ -274,6 +287,8 @@ function commentpress_poets_register_widget_areas() {
 }
 
 add_action( 'widgets_init', 'commentpress_poets_register_widget_areas' );
+
+
 
 /**
  * Enqueue styles to theme the login page.
@@ -353,6 +368,8 @@ function commentpress_poets_enqueue_login_styles() {
 // Add action for the above.
 add_action( 'login_enqueue_scripts', 'commentpress_poets_enqueue_login_styles', 20 );
 
+
+
 /**
  * Override auth panel background.
  *
@@ -373,6 +390,8 @@ function commentpress_poets_admin_head() {
 
 // Add action for the above.
 add_action( 'admin_head', 'commentpress_poets_admin_head' );
+
+
 
 /**
  * Get default image for Open Graph sharing.
@@ -433,6 +452,8 @@ function commentpress_poets_custom_og_image( $media, $post_id = null, $args = []
 // Add filter for the above.
 add_filter( 'jetpack_images_get_images', 'commentpress_poets_custom_og_image', 10, 3 );
 
+
+
 /**
  * Set default image for Open Graph sharing.
  *
@@ -450,6 +471,8 @@ function commentpress_poets_default_og_image( $src = '' ) {
 
 // Add filter for the above.
 add_filter( 'jetpack_open_graph_image_default', 'commentpress_poets_custom_og_image', 10, 3 );
+
+
 
 /**
  * Improve the meta description.
@@ -514,6 +537,8 @@ function commentpress_poets_header_meta_description( $description ) {
 // Add filter for the above.
 add_filter( 'commentpress_header_meta_description', 'commentpress_poets_header_meta_description', 10, 1 );
 
+
+
 /**
  * Filter the conditions for showing feature image switcher button.
  *
@@ -537,6 +562,8 @@ function commentpress_poets_image_switcher_allow_button( $allowed, $post ) {
 
 // Add filter for the above.
 add_filter( 'feature_image_switcher_allow_button', 'commentpress_poets_image_switcher_allow_button', 10, 2 );
+
+
 
 /**
  * Filters the content markup of the Jetpack sharing links.
@@ -565,6 +592,8 @@ function commentpress_poets_sharing_display_markup( $sharing_content, $enabled )
 // Add filter for the above.
 add_filter( 'jetpack_sharing_display_markup', 'commentpress_poets_sharing_display_markup', 10, 2 );
 
+
+
 /**
  * Filters the default post types that can have like buttons on them.
  *
@@ -582,6 +611,8 @@ function commentpress_poets_wpls_get_post_types( $types ) {
 
 // Add filter for the above.
 add_filter( 'wpls_get_post_types', 'commentpress_poets_wpls_get_post_types', 10 );
+
+
 
 /**
  * Adds our styles to the TinyMCE editor.
@@ -613,6 +644,8 @@ function commentpress_poets_add_tinymce_styles( $mce_css ) {
 
 // Add filter for the above.
 add_filter( 'mce_css', 'commentpress_poets_add_tinymce_styles', 20 );
+
+
 
 /**
  * Hides a Member's Poems and Poets menu items until that Member is approved.
