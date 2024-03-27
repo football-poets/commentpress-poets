@@ -126,6 +126,54 @@ add_action( 'wp_enqueue_scripts', 'commentpress_poets_enqueue_scripts', 998 );
 
 
 /**
+ * Filters the menus to highlight Post Type Archives when viewing a single Post.
+ *
+ * @since 1.4
+ *
+ * @param string[] $classes   Array of the CSS classes that are applied to the menu item's `<li>` element.
+ * @param WP_Post  $menu_item The current menu item object.
+ * @param stdClass $args      An object of wp_nav_menu() arguments.
+ * @param int      $depth     Depth of menu item. Used for padding.
+ * @return string[] $classes Modified array of the CSS classes.
+ */
+function commentpress_poets_nav_class( $classes, $item, $args, $depth ) {
+
+	// Only query Post Types and Post Type once.
+	static $custom_post_types, $post_type;
+	if ( empty( $custom_post_types) ) {
+		$custom_post_types = get_post_types( [ '_builtin' => false ] );
+	}
+	if ( empty( $post_type ) ) {
+		$post_type = get_post_type();
+	}
+
+	// Bail if not the currently displayed Post Type.
+	if ( empty( $item->object ) ) {
+		return $classes;
+	}
+	if ( ! in_array( $item->object, $custom_post_types, true ) ) {
+		return $classes;
+	}
+	if ( $post_type !== $item->object ) {
+		return $classes;
+	}
+
+	// Add class to the Post Type Archive item.
+	if ( 'post_type_archive' === $item->type ) {
+		array_push( $classes, 'current-menu-ancestor' );
+	}
+
+	// --<
+	return $classes;
+
+}
+
+// Add filter for the above.
+add_filter( 'nav_menu_css_class', 'commentpress_poets_nav_class', 10, 4 );
+
+
+
+/**
  * Load more Poems on Poet Profile Page.
  *
  * @since 1.4
