@@ -22,7 +22,7 @@ $sql = 'SELECT p.ID, pm.meta_value ' .
 	"AND pm.meta_key = '_post_like_count' " .
 	"AND pm.meta_value != '' " .
 	'ORDER BY CAST(pm.meta_value as unsigned) DESC ' .
-	'LIMIT 50';
+	'LIMIT 40';
 
 // phpcs:ignore: WordPress.DB.DirectDatabaseQuery.DirectQuery, WordPress.DB.DirectDatabaseQuery.NoCaching, WordPress.DB.PreparedSQL.NotPrepared
 $poems = $wpdb->get_results( $sql, ARRAY_A );
@@ -40,7 +40,7 @@ foreach ( $poems as $correspondence ) {
 $query_args = [
 	'post_type' => 'poem',
 	'post__in' => $poem_ids,
-	'posts_per_page' => 50,
+	'posts_per_page' => 40,
 	'orderby' => 'post__in',
 ];
 
