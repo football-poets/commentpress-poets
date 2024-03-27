@@ -659,7 +659,8 @@ a.button.fp-join-in
 Poem Custom Post Type
 --------------------------------------------------------------------------------
 */
-.post.poem .post_title
+.post.poem .post_title,
+.post.poem .poem_title
 {
 	text-transform: none;
 }
@@ -668,6 +669,11 @@ Poem Custom Post Type
 {
 	margin-top: -1.6em;
 	margin-bottom: 1.6em;
+}
+
+#wrapper.page-likes div.search_meta
+{
+	margin-bottom: 0.6em;
 }
 
 .post.poem div.search_meta cite
@@ -1311,12 +1317,12 @@ Post Likes compatibility
 --------------------------------------------------------------------------------
 */
 
-.post .sl-wrapper
+.post .poets-poem-like-wrapper
 {
 	font-size: 150%;
 }
 
-.post .sl-button
+.post .poets-poem-like-button
 {
 	padding: 0.3em 0.5em 0.3em 0;
 }

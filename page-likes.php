@@ -1,7 +1,12 @@
 <?php
 /**
- * Front Page template.
+ * Template Name: Likes
  *
+ * The template for displaying the list of most liked Poems.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
+ *
+ * @since 1.4
  * @package CommentPress_Poets
  */
 
@@ -11,8 +16,8 @@ defined( 'ABSPATH' ) || exit;
 get_header();
 
 ?>
-<!-- front-page.php -->
-<div id="wrapper">
+<!-- page-likes.php -->
+<div id="wrapper" class="page-likes">
 
 	<?php if ( have_posts() ) : ?>
 
@@ -21,12 +26,15 @@ get_header();
 			<?php the_post(); ?>
 
 			<div id="main_wrapper" class="clearfix">
-
-				<div id="page_wrapper" class="page_wrapper front_page">
+				<div id="page_wrapper">
 
 					<?php commentpress_get_feature_image(); ?>
 
-					<div id="content" class="content workflow-wrapper">
+					<?php if ( ! commentpress_has_feature_image() ) : ?>
+						<?php commentpress_page_navigation_template(); ?>
+					<?php endif; ?>
+
+					<div id="content" class="content-wrapper">
 						<div id="post-<?php the_ID(); ?>" <?php post_class(); ?>">
 
 							<?php if ( ! commentpress_has_feature_image() ) : ?>
@@ -36,29 +44,19 @@ get_header();
 							<?php the_content(); ?>
 
 						</div><!-- /post -->
+
+						<?php $poems_by_likes = locate_template( 'assets/includes/poems-by-likes.php' ); ?>
+						<?php if ( $poems_by_likes ) : ?>
+							<?php load_template( $poems_by_likes ); ?>
+						<?php endif; ?>
+
 					</div><!-- /content -->
 
+					<div class="page_nav_lower">
+						<?php commentpress_page_navigation_template(); ?>
+					</div><!-- /page_nav_lower -->
+
 				</div><!-- /page_wrapper -->
-
-				<div class="cp-homepage-widgets clear">
-
-					<div class="cp-homepage-left">
-						<?php if ( ! dynamic_sidebar( 'cp-homepage-left' ) ) : ?>
-						<?php endif; ?>
-					</div>
-
-					<div class="cp-homepage-right">
-						<?php if ( ! dynamic_sidebar( 'cp-homepage-right' ) ) : ?>
-						<?php endif; ?>
-					</div>
-
-					<div class="cp-homepage-below">
-						<?php if ( ! dynamic_sidebar( 'cp-homepage-below' ) ) : ?>
-						<?php endif; ?>
-					</div>
-
-				</div><!-- /cp-homepage-widgets -->
-
 			</div><!-- /main_wrapper -->
 
 		<?php endwhile; ?>

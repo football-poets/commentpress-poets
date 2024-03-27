@@ -31,6 +31,7 @@ if ( $query->have_posts() ) :
 		<div class="poems-by-poet-inner">
 
 			<header class="poems-by-poet-header">
+				<?php /* translators: %s: The name of the Poet. */ ?>
 				<h2 class="poems-by-poet-title"><?php echo sprintf( __( 'Poems by %s', 'commentpress-poets' ), $poet ); ?></h2>
 			</header><!-- .poems-by-poet-header -->
 

@@ -131,7 +131,7 @@ add_action( 'wp_enqueue_scripts', 'commentpress_poets_enqueue_scripts', 998 );
  * @since 1.4
  *
  * @param string[] $classes   Array of the CSS classes that are applied to the menu item's `<li>` element.
- * @param WP_Post  $menu_item The current menu item object.
+ * @param WP_Post  $item The current menu item object.
  * @param stdClass $args      An object of wp_nav_menu() arguments.
  * @param int      $depth     Depth of menu item. Used for padding.
  * @return string[] $classes Modified array of the CSS classes.
@@ -140,7 +140,7 @@ function commentpress_poets_nav_class( $classes, $item, $args, $depth ) {
 
 	// Only query Post Types and Post Type once.
 	static $custom_post_types, $post_type;
-	if ( empty( $custom_post_types) ) {
+	if ( empty( $custom_post_types ) ) {
 		$custom_post_types = get_post_types( [ '_builtin' => false ] );
 	}
 	if ( empty( $post_type ) ) {

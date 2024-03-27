@@ -67,7 +67,8 @@ do_action( 'bp_before_activity_entry' );
 
 				<?php if ( bp_activity_can_comment() ) : ?>
 
-					<a href="<?php bp_activity_comment_link(); ?>" class="button acomment-reply bp-primary-action" id="acomment-comment-<?php bp_activity_id(); ?>"><?php printf( __( 'Comment %s', 'commentpress-poets' ), '<span>' . bp_activity_get_comment_count() . '</span>' ); ?></a>
+					<?php /* translators: %s: The number of comments. */ ?>
+					<a href="<?php bp_activity_comment_link(); ?>" class="button acomment-reply bp-primary-action" id="acomment-comment-<?php bp_activity_id(); ?>"><?php printf( esc_html__( 'Comment %s', 'commentpress-poets' ), '<span>' . bp_activity_get_comment_count() . '</span>' ); ?></a>
 
 				<?php endif; ?>
 
