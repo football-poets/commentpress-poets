@@ -1,4 +1,4 @@
-# Copyright (C) 2022 Christian Wach
+# Copyright (C) 2024 Christian Wach
 # This file is distributed under the .
 msgid ""
 msgstr ""
@@ -9,186 +9,262 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2022-11-14T14:15:43+00:00\n"
+"POT-Creation-Date: 2024-03-27T12:54:31+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"X-Generator: WP-CLI 2.7.0\n"
+"X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: commentpress-poets\n"
 
 #. Theme Name of the theme
+#: style.css
 msgid "CommentPress Football Poets"
 msgstr ""
 
 #. Theme URI of the theme
-msgid "http://www.futureofthebook.org/commentpress/"
+#: style.css
+msgid "https://github.com/football-poets/commentpress-poets"
 msgstr ""
 
 #. Description of the theme
+#: style.css
 msgid "A child of the CommentPress Flat Theme for <em>CommentPress Core</em>."
 msgstr ""
 
 #. Author of the theme
+#: style.css
 msgid "Christian Wach"
 msgstr ""
 
 #. Author URI of the theme
-msgid "http://www.haystack.co.uk"
+#: style.css
+msgid "https://www.haystack.co.uk"
 msgstr ""
 
+#: archive-poem.php:26
 msgid "Poetry Archives"
 msgstr ""
 
+#: archive-poem.php:30
 msgid "This archive contains every poem that has been published on Football Poets. They are listed ten-per-page in reverse chronological order so the most recent poems appear first. Click or tap the arrows in the corners of the page to navigate between pages. It's easier to use the search form below to find a specific poem."
 msgstr ""
 
+#: archive-poem.php:34
+#: archive-poem.php:36
 msgid "Search Poems"
 msgstr ""
 
+#: archive-poem.php:38
+#: archive-poet.php:38
 msgid "Search"
 msgstr ""
 
+#: archive-poem.php:58
+#: archive-poet.php:50
+#: assets/includes/poems-by-likes.php:63
+#: taxonomy-poemcat.php:44
+#: taxonomy-poemtag.php:44
 msgid "Permanent Link to"
 msgstr ""
 
+#: archive-poem.php:66
+#: assets/includes/poems-by-likes.php:71
+#: single-poem.php:47
+#: taxonomy-poemcat.php:52
+#: taxonomy-poemtag.php:52
 msgid "l, F jS, Y"
 msgstr ""
 
+#: archive-poem.php:71
+#: assets/includes/poems-by-likes.php:74
+#: taxonomy-poemcat.php:57
+#: taxonomy-poemtag.php:57
 msgid "Be the first to leave a comment &#187;"
 msgstr ""
 
+#: archive-poem.php:71
+#: assets/includes/poems-by-likes.php:74
+#: taxonomy-poemcat.php:57
+#: taxonomy-poemtag.php:57
 msgid "1 Comment &#187;"
 msgstr ""
 
+#: archive-poem.php:71
+#: assets/includes/poems-by-likes.php:74
+#: taxonomy-poemcat.php:57
+#: taxonomy-poemtag.php:57
 msgid "% Comments &#187;"
 msgstr ""
 
+#: archive-poem.php:79
+#: archive-poet.php:60
+#: taxonomy-poemcat.php:65
+#: taxonomy-poemtag.php:65
 msgid "Not Found"
 msgstr ""
 
+#: archive-poem.php:81
+#: archive-poet.php:62
+#: taxonomy-poemcat.php:66
+#: taxonomy-poemtag.php:66
 msgid "Sorry, but you are looking for something that isn't here."
 msgstr ""
 
+#: archive-poet.php:26
 msgid "The Football Poets"
 msgstr ""
 
+#: archive-poet.php:30
 msgid "This archive lists all the poets who have published one or more poems on this site. Poets are listed fifty-per-page in alphabetical order. Click or tap the arrows in the corners of the page to navigate between pages. It's easier to use the search form below if you are looking for a specific poet."
 msgstr ""
 
+#: archive-poet.php:34
+#: archive-poet.php:36
 msgid "Search Poets"
 msgstr ""
 
+#: assets/includes/poems-by-poet-ajax.php:45
+#: assets/includes/poems-by-poet.php:63
 msgid "Load more"
 msgstr ""
 
+#. translators: %s: The name of the Poet.
+#: assets/includes/poems-by-poet.php:35
 msgid "Poems by %s"
 msgstr ""
 
 #. translators: %s: The name of the Post Type.
+#: assets/templates/activity_sidebar.php:44
 msgid "Recent Comments on this %s"
 msgstr ""
 
+#: assets/templates/activity_sidebar.php:63
 msgid "Latest Comments"
 msgstr ""
 
+#: assets/templates/activity_sidebar.php:77
 msgid "Activity"
 msgstr ""
 
+#: buddypress/activity/entry.php:62
 msgid "View Conversation"
 msgstr ""
 
+#. translators: %s: The number of comments.
+#: buddypress/activity/entry.php:71
 msgid "Comment %s"
 msgstr ""
 
+#: buddypress/activity/entry.php:79
 msgid "Mark as Favorite"
 msgstr ""
 
+#: buddypress/activity/entry.php:79
 msgid "Favorite"
 msgstr ""
 
+#: buddypress/activity/entry.php:83
 msgid "Remove Favorite"
 msgstr ""
 
 #. translators: accessibility text
+#: buddypress/activity/entry.php:136
 msgid "Comment"
 msgstr ""
 
+#: buddypress/activity/entry.php:141
 msgid "Post"
 msgstr ""
 
+#: buddypress/activity/entry.php:141
 msgid "Cancel"
 msgstr ""
 
+#: front-page.php:73
+#: page-likes.php:71
 msgid "Page Not Found"
 msgstr ""
 
+#: front-page.php:74
+#: page-likes.php:72
+msgid "Sorry, but you are looking for something that isn’t here."
+msgstr ""
+
+#: functions.php:114
 msgid "Loading"
 msgstr ""
 
+#: functions.php:192
 msgid "Authentication failed."
 msgstr ""
 
+#: functions.php:199
 msgid "Oh dear, something went wrong. No Poet ID was received."
 msgstr ""
 
+#: functions.php:278
 msgid "Notes"
 msgstr ""
 
+#: functions.php:304
 msgid "Homepage Left"
 msgstr ""
 
+#: functions.php:306
 msgid "An optional widget area on the left of the Homepage"
 msgstr ""
 
+#: functions.php:316
 msgid "Homepage Right"
 msgstr ""
 
+#: functions.php:318
 msgid "An optional widget area on the right of the Homepage"
 msgstr ""
 
+#: functions.php:328
 msgid "Homepage Lower"
 msgstr ""
 
+#: functions.php:330
 msgid "An optional widget area below the left and right widgets on the Homepage"
 msgstr ""
 
 #. translators: %s: The name of the Poet.
+#: functions.php:565
 msgid "This is the Football Poets profile page for %s. All the poems they have submitted to this website are listed here."
 msgstr ""
 
-msgid "Content"
+#. Template Name of the theme
+msgid "Likes"
 msgstr ""
 
-msgid "Literal"
-msgstr ""
-
-msgid "Original"
-msgstr ""
-
+#: single-poem.php:60
 msgid "Tags: "
 msgstr ""
 
+#: single-poem.php:64
 msgid "Categories:"
 msgstr ""
 
-msgid "Literal Translation"
-msgstr ""
-
-msgid "Original Text"
-msgstr ""
-
+#: single-poem.php:88
 msgid "Poem Not Found"
 msgstr ""
 
+#: single-poem.php:89
 msgid "Sorry, no poems matched your criteria."
 msgstr ""
 
+#: single-poet.php:71
 msgid "Poet Not Found"
 msgstr ""
 
+#: single-poet.php:72
 msgid "Sorry, no poets matched your criteria."
 msgstr ""
 
+#: taxonomy-poemcat.php:26
 msgid "Poems filed under"
 msgstr ""
 
+#: taxonomy-poemtag.php:26
 msgid "Poems tagged"
 msgstr ""
