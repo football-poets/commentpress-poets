@@ -16,7 +16,7 @@
 defined( 'ABSPATH' ) || exit;
 
 // Set our version here.
-define( 'COMMENTPRESS_POETS_VERSION', '1.4' );
+define( 'COMMENTPRESS_POETS_VERSION', '1.4.1' );
 
 
 
