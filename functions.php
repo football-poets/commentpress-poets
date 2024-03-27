@@ -252,7 +252,7 @@ function commentpress_poets_poem_meta() {
 function commentpress_poets_register_widget_areas() {
 
 	// Define an area where a widget may be placed.
-	register_sidebar( [
+	$args = [
 		'name' => __( 'Homepage Left', 'commentpress-poets' ),
 		'id' => 'cp-homepage-left',
 		'description' => __( 'An optional widget area on the left of the Homepage', 'commentpress-poets' ),
@@ -260,10 +260,11 @@ function commentpress_poets_register_widget_areas() {
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
-	] );
+	];
+	register_sidebar( $args );
 
 	// Define an area where a widget may be placed.
-	register_sidebar( [
+	$args = [
 		'name' => __( 'Homepage Right', 'commentpress-poets' ),
 		'id' => 'cp-homepage-right',
 		'description' => __( 'An optional widget area on the right of the Homepage', 'commentpress-poets' ),
@@ -271,10 +272,11 @@ function commentpress_poets_register_widget_areas() {
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
-	] );
+	];
+	register_sidebar( $args );
 
 	// Define an area where a widget may be placed.
-	register_sidebar( [
+	$args = [
 		'name' => __( 'Homepage Lower', 'commentpress-poets' ),
 		'id' => 'cp-homepage-below',
 		'description' => __( 'An optional widget area below the left and right widgets on the Homepage', 'commentpress-poets' ),
@@ -282,7 +284,8 @@ function commentpress_poets_register_widget_areas() {
 		'after_widget' => '</div>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
-	] );
+	];
+	register_sidebar( $args );
 
 }
 
@@ -511,7 +514,7 @@ function commentpress_poets_header_meta_description( $description ) {
 		// Truncate Poet for description.
 		$description = sprintf(
 			/* translators: %s: The name of the Poet. */
-			__( 'This is the Football Poets profile page for %s. All the poems they have submitted to this website are listed here.', 'commentpress-poets' ),
+			esc_html__( 'This is the Football Poets profile page for %s. All the poems they have submitted to this website are listed here.', 'commentpress-poets' ),
 			single_post_title( '', false )
 		);
 
@@ -602,7 +605,7 @@ add_filter( 'jetpack_sharing_display_markup', 'commentpress_poets_sharing_displa
  * @param array $types The default post types array.
  * @return array $types The modified post types array
  */
-function commentpress_poets_wpls_get_post_types( $types ) {
+function commentpress_poets_liker_get_post_types( $types ) {
 
 	// Only poems allowed.
 	return [ 'poem' => 'poem' ];
@@ -610,7 +613,7 @@ function commentpress_poets_wpls_get_post_types( $types ) {
 }
 
 // Add filter for the above.
-add_filter( 'wpls_get_post_types', 'commentpress_poets_wpls_get_post_types', 10 );
+add_filter( 'poets_poem_likes_get_post_types', 'commentpress_poets_liker_get_post_types', 10 );
 
 
 
