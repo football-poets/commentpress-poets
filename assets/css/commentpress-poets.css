@@ -715,6 +715,11 @@ Poem Custom Post Type
 	margin-top: 3em;
 }
 
+.single-poem #content div.sharedaddy h3.sd-title
+{
+	display: block;
+}
+
 
 /*
 --------------------------------------------------------------------------------
@@ -833,10 +838,10 @@ Poet Custom Post Type
 
 .poems-by-poet li.load-more:after
 {
-    content: "";
-    display: block;
-    height: 0;
-    clear: both;
+	content: "";
+	display: block;
+	height: 0;
+	clear: both;
 }
 
 .poems-by-poet li.load-more a
@@ -852,7 +857,7 @@ Poet Custom Post Type
 
 .poems-by-poet li.load-more a.loading
 {
-    background-position-y: 2px;
+	background-position-y: 2px;
 }
 
 
@@ -1083,7 +1088,7 @@ BuddyPress customisations
 .bp-user #buddypress div#message
 {
 	margin-left: 15px;
-    margin-right: 15px;
+	margin-right: 15px;
 }
 
 /* Make text area monospaced */
