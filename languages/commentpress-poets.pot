@@ -2,14 +2,14 @@
 # This file is distributed under the .
 msgid ""
 msgstr ""
-"Project-Id-Version: CommentPress Football Poets 1.4\n"
+"Project-Id-Version: CommentPress Football Poets 1.4.1\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/theme/commentpress-poets\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2024-03-27T12:54:31+00:00\n"
+"POT-Creation-Date: 2024-04-05T20:02:50+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.10.0\n"
 "X-Domain: commentpress-poets\n"
@@ -48,24 +48,24 @@ msgid "This archive contains every poem that has been published on Football Poet
 msgstr ""
 
 #: archive-poem.php:34
-#: archive-poem.php:36
+#: archive-poem.php:37
 msgid "Search Poems"
 msgstr ""
 
-#: archive-poem.php:38
-#: archive-poet.php:38
+#: archive-poem.php:39
+#: archive-poet.php:39
 msgid "Search"
 msgstr ""
 
-#: archive-poem.php:58
-#: archive-poet.php:50
+#: archive-poem.php:59
+#: archive-poet.php:51
 #: assets/includes/poems-by-likes.php:63
 #: taxonomy-poemcat.php:44
 #: taxonomy-poemtag.php:44
 msgid "Permanent Link to"
 msgstr ""
 
-#: archive-poem.php:66
+#: archive-poem.php:67
 #: assets/includes/poems-by-likes.php:71
 #: single-poem.php:47
 #: taxonomy-poemcat.php:52
@@ -73,36 +73,36 @@ msgstr ""
 msgid "l, F jS, Y"
 msgstr ""
 
-#: archive-poem.php:71
+#: archive-poem.php:72
 #: assets/includes/poems-by-likes.php:74
 #: taxonomy-poemcat.php:57
 #: taxonomy-poemtag.php:57
 msgid "Be the first to leave a comment &#187;"
 msgstr ""
 
-#: archive-poem.php:71
+#: archive-poem.php:72
 #: assets/includes/poems-by-likes.php:74
 #: taxonomy-poemcat.php:57
 #: taxonomy-poemtag.php:57
 msgid "1 Comment &#187;"
 msgstr ""
 
-#: archive-poem.php:71
+#: archive-poem.php:72
 #: assets/includes/poems-by-likes.php:74
 #: taxonomy-poemcat.php:57
 #: taxonomy-poemtag.php:57
 msgid "% Comments &#187;"
 msgstr ""
 
-#: archive-poem.php:79
-#: archive-poet.php:60
+#: archive-poem.php:80
+#: archive-poet.php:61
 #: taxonomy-poemcat.php:65
 #: taxonomy-poemtag.php:65
 msgid "Not Found"
 msgstr ""
 
-#: archive-poem.php:81
-#: archive-poet.php:62
+#: archive-poem.php:82
+#: archive-poet.php:63
 #: taxonomy-poemcat.php:66
 #: taxonomy-poemtag.php:66
 msgid "Sorry, but you are looking for something that isn't here."
@@ -117,7 +117,7 @@ msgid "This archive lists all the poets who have published one or more poems on 
 msgstr ""
 
 #: archive-poet.php:34
-#: archive-poet.php:36
+#: archive-poet.php:37
 msgid "Search Poets"
 msgstr ""
 
@@ -200,36 +200,36 @@ msgstr ""
 msgid "Oh dear, something went wrong. No Poet ID was received."
 msgstr ""
 
-#: functions.php:278
+#: functions.php:279
 msgid "Notes"
 msgstr ""
 
-#: functions.php:304
+#: functions.php:306
 msgid "Homepage Left"
 msgstr ""
 
-#: functions.php:306
+#: functions.php:308
 msgid "An optional widget area on the left of the Homepage"
 msgstr ""
 
-#: functions.php:316
+#: functions.php:318
 msgid "Homepage Right"
 msgstr ""
 
-#: functions.php:318
+#: functions.php:320
 msgid "An optional widget area on the right of the Homepage"
 msgstr ""
 
-#: functions.php:328
+#: functions.php:330
 msgid "Homepage Lower"
 msgstr ""
 
-#: functions.php:330
+#: functions.php:332
 msgid "An optional widget area below the left and right widgets on the Homepage"
 msgstr ""
 
 #. translators: %s: The name of the Poet.
-#: functions.php:565
+#: functions.php:567
 msgid "This is the Football Poets profile page for %s. All the poems they have submitted to this website are listed here."
 msgstr ""
 
@@ -237,19 +237,19 @@ msgstr ""
 msgid "Likes"
 msgstr ""
 
-#: single-poem.php:60
+#: single-poem.php:65
 msgid "Tags: "
 msgstr ""
 
-#: single-poem.php:64
+#: single-poem.php:72
 msgid "Categories:"
 msgstr ""
 
-#: single-poem.php:88
+#: single-poem.php:108
 msgid "Poem Not Found"
 msgstr ""
 
-#: single-poem.php:89
+#: single-poem.php:109
 msgid "Sorry, no poems matched your criteria."
 msgstr ""
 
