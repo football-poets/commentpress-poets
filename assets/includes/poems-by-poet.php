@@ -12,9 +12,9 @@ defined( 'ABSPATH' ) || exit;
 
 // Define query args.
 $query_args = [
-	'connected_type' => 'poets_to_poems',
+	'connected_type'  => 'poets_to_poems',
 	'connected_items' => get_queried_object(),
-	'posts_per_page' => 100,
+	'posts_per_page'  => 100,
 ];
 
 // Do the query.
@@ -32,7 +32,7 @@ if ( $query->have_posts() ) :
 
 			<header class="poems-by-poet-header">
 				<?php /* translators: %s: The name of the Poet. */ ?>
-				<h2 class="poems-by-poet-title"><?php echo sprintf( __( 'Poems by %s', 'commentpress-poets' ), $poet ); ?></h2>
+				<h2 class="poems-by-poet-title"><?php echo sprintf( esc_html__( 'Poems by %s', 'commentpress-poets' ), esc_html( $poet ) ); ?></h2>
 			</header><!-- .poems-by-poet-header -->
 
 			<ul class="poems-by-poet-list">

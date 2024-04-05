@@ -704,6 +704,16 @@ Poem Custom Post Type
 	margin-top: 1em;
 }
 
+.single-poem .entry-meta .postmetadata.tag-meta
+{
+	margin-top: 3em;
+}
+
+.single-poem #content div.sharedaddy div.sd-block,
+.single-poem .content div.sharedaddy div.sd-block
+{
+	margin-top: 3em;
+}
 
 
 /*
@@ -1425,7 +1435,8 @@ Print Tweaks
 
 @media print {
 
-	div.fb_reset
+	div.fb_reset,
+	.poets-poem-like-wrapper
 	{
 		display: none;
 	}

@@ -12,10 +12,10 @@ defined( 'ABSPATH' ) || exit;
 
 // Define query args.
 $query_args = [
-	'connected_type' => 'poets_to_poems',
+	'connected_type'  => 'poets_to_poems',
 	'connected_items' => get_queried_object(),
-	'nopaging' => true,
-	'no_found_rows' => true,
+	'nopaging'        => true,
+	'no_found_rows'   => true,
 ];
 
 // Do the query.

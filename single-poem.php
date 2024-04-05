@@ -55,16 +55,36 @@ get_header();
 
 							<?php commentpress_poets_poem_meta(); ?>
 
+							<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?>
 							<?php echo commentpress_multipager(); ?>
 
-							<?php the_tags( '<div class="entry-meta"><p class="postmetadata">' . __( 'Tags: ', 'commentpress-poets' ), '<span class="tag-divider">,</span> ', '</p></div>' ); ?>
+							<?php if ( ! empty( get_the_term_list( get_the_ID(), 'poemtag' ) ) ) : ?>
+								<div class="entry-meta entry-tag-meta">
+									<p class="postmetadata tag-meta">
+										<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?>
+										<?php echo get_the_term_list( get_the_ID(), 'poemtag', __( 'Tags: ', 'commentpress-poets' ), '<span class="tag-divider">,</span> ' ); ?>
+									</p>
+								</div>
+							<?php endif; ?>
 
 							<?php if ( ! empty( get_the_category_list( ', ' ) ) ) : ?>
 								<div class="entry-category-meta clearfix">
 									<p class="category-meta"><?php esc_html_e( 'Categories:', 'commentpress-poets' ); ?></p>
+									<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?>
 									<?php echo get_the_category_list( ', ' ); ?>
 								</div>
 							<?php endif; ?>
+
+							<?php
+
+							/**
+							 * Fires after a single Poem has been fully rendered.
+							 *
+							 * @since 1.4.1
+							 */
+							do_action( 'commentpress_poets_single_poem_after' );
+
+							?>
 
 						</div><!-- /post -->
 					</div><!-- /content -->

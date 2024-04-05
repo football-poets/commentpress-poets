@@ -107,7 +107,7 @@ function commentpress_poets_enqueue_scripts() {
 
 	// Define local vars.
 	$vars = [
-		'settings' => [
+		'settings'     => [
 			'ajax_url' => admin_url( 'admin-ajax.php' ),
 		],
 		'localisation' => [
@@ -188,7 +188,7 @@ function commentpress_poets_poems_ajax_load() {
 
 	// Since this is an AJAX request, check security.
 	$result = check_ajax_referer( 'poems_load_more', false, false );
-	if ( $result === false ) {
+	if ( false === $result ) {
 		$data['error'] = __( 'Authentication failed.', 'commentpress-poets' );
 		wp_send_json( $data );
 	}
@@ -246,7 +246,7 @@ function commentpress_poets_poem_meta() {
 
 	// Get value if the custom field has one.
 	$copyright = '';
-	$existing = get_post_meta( get_the_ID(), $key, true );
+	$existing  = get_post_meta( get_the_ID(), $key, true );
 	if ( false !== $existing ) {
 		$copyright = get_post_meta( get_the_ID(), $key, true );
 	}
@@ -255,7 +255,7 @@ function commentpress_poets_poem_meta() {
 	$key = '_poets_poems_content_notes';
 
 	// Get value if the custom field has one.
-	$notes = '';
+	$notes    = '';
 	$existing = get_post_meta( get_the_ID(), $key, true );
 	if ( false !== $existing ) {
 		$notes = get_post_meta( get_the_ID(), $key, true );
@@ -269,14 +269,16 @@ function commentpress_poets_poem_meta() {
 	// Maybe show copyright.
 	if ( ! empty( $copyright ) ) {
 		echo '<div class="poem_author_copyright">';
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo apply_filters( 'commentpress_poets_richtext_content', '&copy; ' . $copyright );
 		echo '</div>';
 	}
 
 	// Maybe show content.
 	if ( ! empty( $notes ) ) {
-		echo '<h4>' . __( 'Notes', 'commentpress-poets' ) . '</h4>' . "\n";
+		echo '<h4>' . esc_html__( 'Notes', 'commentpress-poets' ) . '</h4>' . "\n";
 		echo '<div class="poem_content_notes">';
+		// phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped
 		echo apply_filters( 'commentpress_poets_richtext_content', $notes );
 		echo '</div>';
 	}
@@ -301,37 +303,37 @@ function commentpress_poets_register_widget_areas() {
 
 	// Define an area where a widget may be placed.
 	$args = [
-		'name' => __( 'Homepage Left', 'commentpress-poets' ),
-		'id' => 'cp-homepage-left',
-		'description' => __( 'An optional widget area on the left of the Homepage', 'commentpress-poets' ),
+		'name'          => __( 'Homepage Left', 'commentpress-poets' ),
+		'id'            => 'cp-homepage-left',
+		'description'   => __( 'An optional widget area on the left of the Homepage', 'commentpress-poets' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	];
 	register_sidebar( $args );
 
 	// Define an area where a widget may be placed.
 	$args = [
-		'name' => __( 'Homepage Right', 'commentpress-poets' ),
-		'id' => 'cp-homepage-right',
-		'description' => __( 'An optional widget area on the right of the Homepage', 'commentpress-poets' ),
+		'name'          => __( 'Homepage Right', 'commentpress-poets' ),
+		'id'            => 'cp-homepage-right',
+		'description'   => __( 'An optional widget area on the right of the Homepage', 'commentpress-poets' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	];
 	register_sidebar( $args );
 
 	// Define an area where a widget may be placed.
 	$args = [
-		'name' => __( 'Homepage Lower', 'commentpress-poets' ),
-		'id' => 'cp-homepage-below',
-		'description' => __( 'An optional widget area below the left and right widgets on the Homepage', 'commentpress-poets' ),
+		'name'          => __( 'Homepage Lower', 'commentpress-poets' ),
+		'id'            => 'cp-homepage-below',
+		'description'   => __( 'An optional widget area below the left and right widgets on the Homepage', 'commentpress-poets' ),
 		'before_widget' => '<div id="%1$s" class="widget %2$s">',
-		'after_widget' => '</div>',
-		'before_title' => '<h3 class="widget-title">',
-		'after_title' => '</h3>',
+		'after_widget'  => '</div>',
+		'before_title'  => '<h3 class="widget-title">',
+		'after_title'   => '</h3>',
 	];
 	register_sidebar( $args );
 
@@ -363,7 +365,7 @@ function commentpress_poets_enqueue_login_styles() {
 		#login h1 a,
 		.login h1 a
 		{
-			background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/assets/images/logo/football-poets-logo-200.png);
+			background-image: url(<?php echo esc_url( get_stylesheet_directory_uri() ); ?>/assets/images/logo/football-poets-logo-200.png);
 			background-size: 200px;
 			width: 200px;
 			height: 66px;
@@ -450,7 +452,7 @@ add_action( 'admin_head', 'commentpress_poets_admin_head' );
  * @since 1.3
  *
  * @param array $media The array of image data.
- * @param int $post_id The Id of the WordPress post - sometimes missing.
+ * @param int   $post_id The Id of the WordPress post - sometimes missing.
  * @param array $args Additional arguments - sometimes missing.
  */
 function commentpress_poets_custom_og_image( $media, $post_id = null, $args = [] ) {
@@ -489,12 +491,12 @@ function commentpress_poets_custom_og_image( $media, $post_id = null, $args = []
 	// --<
 	return [
 		[
-			'type'  => 'image',
-			'from'  => 'custom_fallback',
-			'src'   => esc_url( $url ),
-			'src_width' => 200,
+			'type'       => 'image',
+			'from'       => 'custom_fallback',
+			'src'        => esc_url( $url ),
+			'src_width'  => 200,
 			'src_height' => 200,
-			'href'  => $permalink,
+			'href'       => $permalink,
 		],
 	];
 
@@ -547,7 +549,7 @@ function commentpress_poets_header_meta_description( $description ) {
 	if ( ! ( $queried_post instanceof WP_Post ) ) {
 		return $description;
 	}
-	if ( $queried_post->post_type != 'poet' ) {
+	if ( 'poet' !== $queried_post->post_type ) {
 		return $description;
 	}
 
@@ -595,14 +597,14 @@ add_filter( 'commentpress_header_meta_description', 'commentpress_poets_header_m
  *
  * @since 1.3.4
  *
- * @param bool $allowed True if button is to be shown, false otherwise.
+ * @param bool    $allowed True if button is to be shown, false otherwise.
  * @param WP_Post $post The WordPress Post object.
  * @return bool $allowed True if button is to be shown, false otherwise.
  */
 function commentpress_poets_image_switcher_allow_button( $allowed, $post ) {
 
 	// Disallow on Poet CPT.
-	if ( $post->post_type == 'poet' ) {
+	if ( 'poet' === $post->post_type ) {
 		$allowed = false;
 	}
 
@@ -622,7 +624,7 @@ add_filter( 'feature_image_switcher_allow_button', 'commentpress_poets_image_swi
  * @since 1.3.5
  *
  * @param string $sharing_content Content markup of the Jetpack sharing links.
- * @param array $enabled Array of Sharing Services currently enabled.
+ * @param array  $enabled Array of Sharing Services currently enabled.
  * @return string $sharing_content Modified content markup of the Jetpack sharing links.
  */
 function commentpress_poets_sharing_display_markup( $sharing_content, $enabled ) {
@@ -642,6 +644,45 @@ function commentpress_poets_sharing_display_markup( $sharing_content, $enabled )
 
 // Add filter for the above.
 add_filter( 'jetpack_sharing_display_markup', 'commentpress_poets_sharing_display_markup', 10, 2 );
+
+
+
+/**
+ * Removes the Jetpack sharing links from the content.
+ *
+ * @since 1.4.1
+ */
+function commentpress_poets_sharing_remove() {
+
+	// Remove existing callbacks.
+	remove_filter( 'the_content', 'sharing_display', 19 );
+	remove_filter( 'the_excerpt', 'sharing_display', 19 );
+	if ( class_exists( 'Jetpack_Likes' ) ) {
+		remove_filter( 'the_content', [ Jetpack_Likes::init(), 'post_likes' ], 30, 1 );
+	}
+
+}
+
+// Add action for the above.
+add_action( 'loop_start', 'commentpress_poets_sharing_remove' );
+
+
+
+/**
+ * Adds the Jetpack sharing links to the custom hook.
+ *
+ * @since 1.4.1
+ */
+function commentpress_poets_sharing_add() {
+
+	if ( function_exists( 'sharing_display' ) ) {
+		sharing_display( '', true );
+	}
+
+}
+
+// Add action for the above.
+add_action( 'commentpress_poets_single_poem_after', 'commentpress_poets_sharing_add' );
 
 
 
@@ -704,12 +745,12 @@ add_filter( 'mce_css', 'commentpress_poets_add_tinymce_styles', 20 );
  * @since 1.3.7
  *
  * @param string $value Markup for the tab list item including link.
- * @param array $user_nav_item Array holding parts used to construct tab list item. Passed by reference.
+ * @param array  $user_nav_item Array holding parts used to construct tab list item. Passed by reference.
  * @return string $value Modified markup for the tab list item including link.
  */
 function commentpress_poets_nav_item_moderation_check( $value, $user_nav_item ) {
 
-	$user_id = get_current_user_id();
+	$user_id  = get_current_user_id();
 	$moderate = get_option( 'bprwg_moderate' );
 
 	// Is User still held in moderation? And is this the User's profile?

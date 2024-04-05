@@ -39,14 +39,14 @@ get_header();
 
 							<?php the_post(); ?>
 
-							<div class="<?php echo join( ' ', get_post_class( 'post' ) ); ?> search_result">
+							<div class="<?php echo esc_attr( join( ' ', get_post_class( 'post' ) ) ); ?> search_result">
 
 								<h3 id="post-<?php the_ID(); ?>" class="post_title"><a href="<?php the_permalink(); ?>" rel="bookmark" title="<?php esc_attr_e( 'Permanent Link to', 'commentpress-poets' ); ?> <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h3>
 
 								<div class="search_meta">
 									<?php if ( ! empty( $post->connected ) ) : ?>
 										<?php foreach ( $post->connected as $poet ) : ?>
-											<cite class="fn"><a href="<?php echo esc_url( get_permalink( $poet->ID ) ); ?>"><?php echo get_the_title( $poet->ID ); ?></a></cite>
+											<cite class="fn"><a href="<?php echo esc_url( get_permalink( $poet->ID ) ); ?>"><?php echo esc_html( get_the_title( $poet->ID ) ); ?></a></cite>
 										<?php endforeach; ?>
 									<?php endif; ?>
 									<p><a href="<?php the_permalink(); ?>"><?php echo esc_html( get_the_date( __( 'l, F jS, Y', 'commentpress-poets' ) ) ); ?></a></p>

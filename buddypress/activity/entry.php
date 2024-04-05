@@ -57,7 +57,7 @@ do_action( 'bp_before_activity_entry' );
 
 		<div class="activity-meta">
 
-			<?php if ( bp_get_activity_type() == 'activity_comment' ) : ?>
+			<?php if ( bp_get_activity_type() === 'activity_comment' ) : ?>
 
 				<a href="<?php bp_activity_thread_permalink(); ?>" class="button view bp-secondary-action" title="<?php esc_attr_e( 'View Conversation', 'commentpress-poets' ); ?>"><?php esc_html_e( 'View Conversation', 'commentpress-poets' ); ?></a>
 
@@ -68,7 +68,7 @@ do_action( 'bp_before_activity_entry' );
 				<?php if ( bp_activity_can_comment() ) : ?>
 
 					<?php /* translators: %s: The number of comments. */ ?>
-					<a href="<?php bp_activity_comment_link(); ?>" class="button acomment-reply bp-primary-action" id="acomment-comment-<?php bp_activity_id(); ?>"><?php printf( esc_html__( 'Comment %s', 'commentpress-poets' ), '<span>' . bp_activity_get_comment_count() . '</span>' ); ?></a>
+					<a href="<?php bp_activity_comment_link(); ?>" class="button acomment-reply bp-primary-action" id="acomment-comment-<?php bp_activity_id(); ?>"><?php printf( esc_html__( 'Comment %s', 'commentpress-poets' ), '<span>' . esc_html( bp_activity_get_comment_count() ) . '</span>' ); ?></a>
 
 				<?php endif; ?>
 

@@ -24,7 +24,7 @@ $is_commentable = commentpress_is_commentable();
 if ( $is_commentable && ! post_password_required() ) {
 
 	// Get singular Post Type label.
-	$current_type = get_post_type();
+	$current_type  = get_post_type();
 	$post_type_obj = get_post_type_object( $current_type );
 
 	/**
@@ -96,7 +96,7 @@ $_max_members = 10;
 
 				?>
 
-				<?php if ( $is_commentable && $_page_comments_output != '' ) : ?>
+				<?php if ( $is_commentable && '' !== $_page_comments_output ) : ?>
 
 					<?php
 
@@ -111,9 +111,10 @@ $_max_members = 10;
 
 					?>
 
-					<h3 class="activity_heading"><?php echo $page_comments_title; ?></h3>
+					<h3 class="activity_heading"><?php echo esc_html( $page_comments_title ); ?></h3>
 
 					<div class="paragraph_wrapper page_comments_output">
+						<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?>
 						<?php echo $_page_comments_output; ?>
 					</div>
 
@@ -130,7 +131,7 @@ $_max_members = 10;
 
 				<?php endif; /* End commentable Post/Page check. */ ?>
 
-				<?php if ( $_all_comments_output != '' ) : ?>
+				<?php if ( '' !== $_all_comments_output ) : ?>
 
 					<?php
 
@@ -145,9 +146,10 @@ $_max_members = 10;
 
 					?>
 
-					<h3 class="activity_heading"><?php echo $_all_comments_title; ?></h3>
+					<h3 class="activity_heading"><?php echo esc_html( $_all_comments_title ); ?></h3>
 
 					<div class="paragraph_wrapper all_comments_output start_open">
+						<?php /* phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped */ ?>
 						<?php echo $_all_comments_output; ?>
 					</div>
 
