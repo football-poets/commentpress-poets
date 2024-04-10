@@ -1324,6 +1324,13 @@ form.contact-form
 	background-color: #f7f7ef;
 }
 
+form.contact-form .grunion-field-wrap textarea
+{
+	padding-top: 12px;
+	padding-bottom: 12px;
+	width: 100%;
+}
+
 
 
 /*
