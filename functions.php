@@ -754,8 +754,10 @@ function commentpress_poets_nav_item_moderation_check( $value, $user_nav_item ) 
 	$moderate = get_option( 'bprwg_moderate' );
 
 	// Is User still held in moderation? And is this the User's profile?
-	if ( $moderate && bp_registration_get_moderation_status( $user_id ) && bp_is_my_profile() ) {
-		return '';
+	if ( function_exists( 'bp_registration_get_moderation_status' ) ) {
+		if ( $moderate && bp_registration_get_moderation_status( $user_id ) && bp_is_my_profile() ) {
+			return '';
+		}
 	}
 
 	// --<
