@@ -457,7 +457,7 @@ add_action( 'admin_head', 'commentpress_poets_admin_head' );
  */
 function commentpress_poets_custom_og_image( $media, $post_id = null, $args = [] ) {
 
-	///*
+	/*
 	// Logging.
 	$e = new \Exception();
 	$trace = $e->getTraceAsString();
@@ -468,11 +468,11 @@ function commentpress_poets_custom_og_image( $media, $post_id = null, $args = []
 		'args' => $args,
 		//'backtrace' => $trace,
 	], true ) );
-	//*/
+	*/
 
 	/*
 	// Bail if media is set.
-	if ( $media ) {
+	if ( ! empty( $media ) ) {
 		return $media;
 	}
 	*/
