@@ -457,7 +457,7 @@ add_action( 'admin_head', 'commentpress_poets_admin_head' );
  */
 function commentpress_poets_custom_og_image( $media, $post_id = null, $args = [] ) {
 
-	/*
+	///*
 	// Logging.
 	$e = new \Exception();
 	$trace = $e->getTraceAsString();
@@ -468,7 +468,7 @@ function commentpress_poets_custom_og_image( $media, $post_id = null, $args = []
 		'args' => $args,
 		//'backtrace' => $trace,
 	], true ) );
-	*/
+	//*/
 
 	/*
 	// Bail if media is set.
@@ -518,7 +518,7 @@ add_filter( 'jetpack_images_get_images', 'commentpress_poets_custom_og_image', 1
 function commentpress_poets_default_og_image( $src = '' ) {
 
 	// --<
-	return 'http://footballpoets.org/wp-content/themes/commentpress-poets/assets/images/logo/football-poets-icon.jpg';
+	return get_stylesheet_directory_uri() . '/assets/images/logo/football-poets-icon.jpg';
 
 }
 
