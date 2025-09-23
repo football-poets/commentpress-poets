@@ -485,7 +485,13 @@ function commentpress_poets_custom_og_image( $media, $post_id = null, $args = []
 	// Get permalink of Post.
 	$permalink = get_permalink( $post_id );
 
-	// Get URL of image.
+	/**
+	 * Get the URL of image.
+	 *
+	 * @since 1.0.0
+	 *
+	 * @param string The URL of the default image.
+	 */
 	$url = apply_filters( 'jetpack_photon_url', commentpress_poets_default_og_image() );
 
 	// --<
@@ -512,8 +518,8 @@ add_filter( 'jetpack_images_get_images', 'commentpress_poets_custom_og_image', 1
  *
  * @since 1.3
  *
- * @param str $src The existing Open Graph image URL.
- * @return str $src The modified Open Graph image URL.
+ * @param string $src The existing Open Graph image URL.
+ * @return string $src The modified Open Graph image URL.
  */
 function commentpress_poets_default_og_image( $src = '' ) {
 
@@ -532,8 +538,8 @@ add_filter( 'jetpack_open_graph_image_default', 'commentpress_poets_custom_og_im
  *
  * @since 1.3.4
  *
- * @param str $description The existing meta description.
- * @return str $description The modified meta description.
+ * @param string $description The existing meta description.
+ * @return string $description The modified meta description.
  */
 function commentpress_poets_header_meta_description( $description ) {
 
@@ -711,8 +717,8 @@ add_filter( 'poets_poem_likes_get_post_types', 'commentpress_poets_liker_get_pos
  *
  * @since 1.3.7
  *
- * @param str $mce_css The default TinyMCE stylesheets as set by WordPress.
- * @return str $mce_css The list of stylesheets with ours added.
+ * @param string $mce_css The default TinyMCE stylesheets as set by WordPress.
+ * @return string $mce_css The list of stylesheets with ours added.
  */
 function commentpress_poets_add_tinymce_styles( $mce_css ) {
 

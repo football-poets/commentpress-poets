@@ -32,9 +32,8 @@ if ( $is_commentable && ! post_password_required() ) {
 	 *
 	 * @since 3.8.10
 	 *
-	 * @param str $singular_name The singular label for this Post Type.
-	 * @param str $current_type The Post Type identifier.
-	 * @return str $singular_name The modified label for this Post Type.
+	 * @param string $singular_name The singular label for this Post Type.
+	 * @param string $current_type The Post Type identifier.
 	 */
 	$post_type_name = apply_filters( 'commentpress_lexia_post_type_name', $post_type_obj->labels->singular_name, $current_type );
 
@@ -50,7 +49,7 @@ if ( $is_commentable && ! post_password_required() ) {
 	 *
 	 * @since 3.4
 	 *
-	 * @param str $_paragraph_text The default "Recent Comments" phrase.
+	 * @param string $_paragraph_text The default "Recent Comments" phrase.
 	 */
 	$page_comments_title = apply_filters( 'cp_activity_tab_recent_title_page', $_paragraph_text );
 
